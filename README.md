@@ -1,7 +1,7 @@
 
 # Read ME
 
-**SignatureForge** is a simple and versatile that allows users to create, customise, and download their personal digital signature for documents, forms, or any digital correspondence effortlessly. Built using Vanilla JavaScript, HTML, and CSS, this app provides a clean and efficient interface for signature creation, free from the need for additional libraries or frameworks.
+**SignatureForge** is a simple and versatile tool that allows users to create, customise, and download their personal digital signature for documents, forms, or any digital correspondence effortlessly. Built using Vanilla JavaScript, HTML, and CSS, this app provides a clean and efficient interface for signature creation, free from the need for additional libraries or frameworks.
 
 ## Features
 
