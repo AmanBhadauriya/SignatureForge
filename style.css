@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    cursor: none;
+    background: linear-gradient(120deg, #ebfaeb, #ffffff);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+
+#customCursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(159, 157, 157, 0.55);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+    padding: 20px 20px;
+    margin-top: 50px;
+    background-color: #b6b5b5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.toolItem:hover ~ #customCursor {
+    background-color:#ffa500; ;
+    transform: scale(1.5);
+}
+
+h1:hover ~ #customCursor {
+    background-color: rgb(162, 162, 162);
+    transform: scale(1.5);
+}
+
+#drawingCanvas {
+    border: 2px solid #4CAF50;
+    width: 600px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: 20px 20px;
+    animation: fadeInCanvas 1s ease-in-out;
+}
+
+#toolbar {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.toolItem {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toolItem.active {
+    background-color: orange;
+}
+
+.toolItem.clear {
+    background-color: red;
+}
+
+.toolItem:hover {
+    background-color: #ffa500; 
+    transform: scale(1.05);
+}
+
+.toolItem:active {
+    background-color: #cc7700;
+    transform: scale(0.95);
+}
+
+@keyframes fadeInCanvas {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    #drawingCanvas {
+        width: 450px;
+        height: 300px;
+    }
+
+    .toolItem {
+        margin: 5px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
